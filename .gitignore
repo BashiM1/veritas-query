@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+
+# AWS SAM/CloudFormation temporary files
+.aws-sam/
+packaged.yaml
