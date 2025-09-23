@@ -147,4 +147,4 @@ Completed: Agent Configuration & Permissions, Full End-to-End Testing.
 ### Architectural Decision Records (ADRs)
 
 For a deeper insight into our design choices, please see the Architectural Decision Records located in the `/docs/adr` directory. These documents capture the "why" behind key decisions, such as our choice of database and our agile approach to IAM development.
-```
+```# veritas-query
