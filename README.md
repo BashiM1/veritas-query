@@ -101,7 +101,7 @@ This project was developed in parallel tracks. IAM permissions were developed in
 
 Completed: Setup (Source Control), API Endpoint & Core Infrastructure, Orchestration Logic & Permissions.
 
-**Track 2: Core Logic & User Interface (Owner: [Partner's Name])**
+**Track 2: Core Logic & User Interface (Owner: Ross Agginie)**
 
 Completed: User Interface, Database & Action Group Lambdas.
 
