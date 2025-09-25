@@ -1,4 +1,4 @@
-````markdown
+```markdown
 # Veritas Query
 
 **Veritas Query is a schema-aware Bedrock agent for generating accurate, transparent SQL from natural language.**
@@ -17,16 +17,17 @@ But from day one, our primary design constraint was **trust**. An AI that gives 
 
 **How We Built It**
 
-We built the entire stack on serverless AWS. The core is a Bedrock Agent, but we architected it with a critical guardrail: the agent's master prompt forces it to follow a **two-step, schema-aware process**. Before it's allowed to generate a query, it _must_ call a `get_schema` Lambda to get the live database structure. This grounding in the source of truth is our main defense against the model hallucinating.
+We built the entire stack on serverless AWS. The core is a Bedrock Agent, but we architected it with a critical guardrail: the agent's master prompt forces it to follow a **two-step, schema-aware process**. Before it's allowed to generate a query, it *must* call a `get_schema` Lambda to get the live database structure. This grounding in the source of truth is our main defense against the model hallucinating.
 
 To close the loop on trust, we made the **"View Generated SQL"** button a first-class feature in the UI. This was non-negotiable. It turns the tool from a black box into a glass box, making it a powerful productivity multiplier for data analysts, not a threat.
 
 **Challenges & What We Learned**
 
+
 ### Architecture Diagram
 
-![Veritas Query Architecture](https://i.imgur.com/your-architecture-diagram.png)
-_(Note: This is a placeholder. You will need to generate a PNG of your Mermaid diagram and upload it to a host like Imgur, then replace this link.)_
+![Veritas Query Architecture](https://i.imgur.com/your-architecture-diagram.png) 
+*(Note: This is a placeholder. You will need to generate a PNG of your Mermaid diagram and upload it to a host like Imgur, then replace this link.)*
 
 ```mermaid
 graph TD
@@ -52,7 +53,7 @@ graph TD
         G[(Amazon RDS<br/>single t3.micro instance)]
         H[(AWS Secrets Manager)]
     end
-
+    
     subgraph "Error Handling"
         DLQ[SQS Dead Letter Queue]
     end
@@ -75,11 +76,10 @@ graph TD
     D -- "5. Synthesizes Answer" --> C
     C -- "6. API Response" --> B
     B -- "7. Final Answer" --> A
-
+    
     %% Error Handling
     C -- "Failed Invocations" --> DLQ
 ```
-````
 
 ### Core Technologies Used
 
@@ -101,7 +101,7 @@ This project was developed in parallel tracks. IAM permissions were developed in
 
 Completed: Setup (Source Control), API Endpoint & Core Infrastructure, Orchestration Logic & Permissions.
 
-**Track 2: Core Logic & User Interface (Owner: [Partner's Name])**
+**Track 2: Core Logic & User Interface (Owner: Ross Agginie)**
 
 Completed: User Interface, Database & Action Group Lambdas.
 
@@ -113,10 +113,10 @@ Completed: Agent Configuration & Permissions, Full End-to-End Testing.
 
 #### Prerequisites
 
-- AWS CLI configured
-- AWS SAM CLI (or Terraform) installed
-- Python 3.11+
-- Git
+*   AWS CLI configured
+*   AWS SAM CLI (or Terraform) installed
+*   Python 3.11+
+*   Git
 
 #### Deployment
 
@@ -133,7 +133,7 @@ Completed: Agent Configuration & Permissions, Full End-to-End Testing.
     ```bash
     sam deploy --guided
     ```
-    _(Follow the prompts to provide a stack name and region.)_
+    *(Follow the prompts to provide a stack name and region.)*
 
 #### Running the UI
 
@@ -147,7 +147,4 @@ Completed: Agent Configuration & Permissions, Full End-to-End Testing.
 ### Architectural Decision Records (ADRs)
 
 For a deeper insight into our design choices, please see the Architectural Decision Records located in the `/docs/adr` directory. These documents capture the "why" behind key decisions, such as our choice of database and our agile approach to IAM development.
-
 ```# veritas-query
-
-```
