@@ -1,15 +1,16 @@
-````markdown
 # Veritas Query
 
 # Todo
 
 - [x] Set up CI/CD with AWS CodeBuild and CodePipeline
-- [ ] Configure S3 bucket for static website hosting
-- [ ] Set up CloudFront distribution for CDN
-- [ ] Set up basic Lambda for API Gateway
-- [ ] Set up API Gateway
-- [ ] Set up Lambda for backend services
+- [x] Configure S3 bucket for static website hosting
+- [x] Set up CloudFront distribution for CDN
+- [x] Set up basic Lambda for API Gateway
+- [x] Set up API Gateway
+- [ ] Call api gateway endpoint from the frontend
 - [ ] Set up DynamoDB for database
+- [ ] Use lambda to pull from DynamoDB
+- [ ] Write to DynamoDB from the frontend
 
 **Veritas Query is a schema-aware Bedrock agent for generating accurate, transparent SQL from natural language.**
 
@@ -89,6 +90,7 @@ graph TD
     %% Error Handling
     C -- "Failed Invocations" --> DLQ
 ```
+
 ````
 
 ### Core Technologies Used
@@ -161,3 +163,4 @@ For a deeper insight into our design choices, please see the Architectural Decis
 ```# veritas-query
 
 ```
+````
