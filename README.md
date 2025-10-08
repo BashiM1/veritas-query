@@ -7,14 +7,23 @@
 - [x] Set up CloudFront distribution for CDN
 - [x] Set up basic Lambda for API Gateway
 - [x] Set up API Gateway
-- [ ] Call api gateway endpoint from the frontend
+- [x] Call api gateway endpoint from the frontend
 - [ ] Set up DynamoDB for database
 - [ ] Use lambda to pull from DynamoDB
 - [ ] Write to DynamoDB from the frontend
 
+- [ ] Create query from user input
+- [ ] Send query to lambda
+- [ ] Set up Bedrock agent
+- [ ] Call Bedrock agent from lambda with query
+- [ ] Setup up api /generate and /execute endpoints
+- [ ] Set api as Bedrock agent tools
+
 **Veritas Query is a schema-aware Bedrock agent for generating accurate, transparent SQL from natural language.**
 
 This project was developed for the AWS Agent Hackathon. It is a fully serverless, AI-powered analytics tool that allows non-technical users to query a relational database using plain English, with a core focus on architectural robustness, security, and user trust.
+
+![Architecture Diagram](architecture.png)
 
 ### Our Story: Building Veritas Query
 
