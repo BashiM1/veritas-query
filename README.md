@@ -27,7 +27,7 @@ This project was developed for the AWS Agent Hackathon. It is a fully serverless
 
 ### Our Story: Building Veritas Query
 
-My partner, a senior engineer, and I are alumni of the same cloud program. We saw the AWS Agent Hackathon as a chance to get our hands on the tech we're genuinely excited about—generative AI—and build something beyond the standard curriculum.
+Rossislike, a senior engineer, and I are alumni of the same cloud program. We saw the AWS Agent Hackathon as a chance to get our hands on the tech we're genuinely excited about—generative AI—and build something beyond the standard curriculum.
 
 **What Inspired Us**
 
