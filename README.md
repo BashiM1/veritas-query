@@ -8,11 +8,8 @@
 - [x] Set up basic Lambda for API Gateway
 - [x] Set up API Gateway
 - [x] Call api gateway endpoint from the frontend
-- [ ] Set up DynamoDB for database
-- [ ] Use lambda to pull from DynamoDB
-- [ ] Write to DynamoDB from the frontend
-
-- [ ] Create query from user input
+- [ ] Create POST request from user input
+- [ ] Desplay test response
 - [ ] Send query to lambda
 - [ ] Set up Bedrock agent
 - [ ] Call Bedrock agent from lambda with query
